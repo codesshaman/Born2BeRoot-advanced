@@ -23,3 +23,20 @@ ssh-add -l
 
 2. SSH settings in your webserver:
 
+2.1. Add new user:
+
+adduser username
+
+2.2. Install sudo if sudo is absent:
+
+apt install sudo
+
+2.3. Edit sudoers file:
+
+nano /etc/sudoers
+
+Add follow string:
+
+username  ALL=(ALL:ALL) ALL
+
+2.4. 
