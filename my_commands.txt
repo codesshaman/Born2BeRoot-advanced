@@ -1,0 +1,4 @@
+1. Create folder for ssh keys:
+
+mkdir ~/.sshkeys
+cd ~/.sshkeys
