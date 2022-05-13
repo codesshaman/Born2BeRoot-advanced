@@ -69,3 +69,22 @@ add this records:
 banaction = iptables-ipset-proto6
 banaction_allports = iptables-ipset-proto6-allports
 
+4. Firewall settings
+
+4.1. Install ufw:
+
+apt-get install ufw
+
+4.2. Open ssh, http and https ports:
+
+ufw allow 22
+ufw allow 80
+ufw allow 443
+
+4.3. Run ufw:
+
+ufw enable
+
+4.4. Check ufw status:
+
+ufw status
