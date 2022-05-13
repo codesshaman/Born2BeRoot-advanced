@@ -15,7 +15,11 @@ ssh-copy-id -i id_rsa.pub user@server_address
 
 1.4. Add private key to your host: 
 
-ssh add ~/.sshkeys/id_rsa
+ssh-add ~/.sshkeys/id_rsa
+
+1.5. Check the local public keys:
+
+ssh-add -l
 
 2. SSH settings in your webserver:
 
