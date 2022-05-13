@@ -97,4 +97,4 @@ sudo api install docker docker-compose
 
 5.2. Add current user to docker group:
 
-sudo usermod -aG docker puvblik
+sudo usermod -aG docker username
