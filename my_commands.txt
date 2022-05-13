@@ -46,3 +46,26 @@ ssh-copy-id -i id_rsa.pub username@server_address
 2.6. Connect to the server:
 
 ssh username@server_address
+
+3. Install and config fail2ban and ipset:
+
+3.1. Install packages:
+
+sudo apt install fail2ban ipset
+
+3.2. Config fail2ban:
+
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+
+nano /etc/fail2ban/jail.local
+
+comment this records: 
+
+#banaction = iptables-multiport
+#banaction_allports = iptables-allports
+
+add this records:
+
+banaction = iptables-ipset-proto6
+banaction_allports = iptables-ipset-proto6-allports
+
