@@ -1,4 +1,21 @@
-1. Create folder for ssh keys:
+1. SSH settings in your host
+
+1.1. Create folder for ssh keys:
 
 mkdir ~/.sshkeys
 cd ~/.sshkeys
+
+1.2. Generate ssh key:
+
+ssh-keygen -t rsa -b 4096 -f id_rsa
+
+1.3. Push publickey to server:
+
+ssh-copy-id -i id_rsa.pub user@server_address
+
+1.4. Add private key to your host: 
+
+ssh add ~/.sshkeys/id_rsa
+
+2. SSH settings in your webserver:
+
