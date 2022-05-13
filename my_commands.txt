@@ -73,18 +73,28 @@ banaction_allports = iptables-ipset-proto6-allports
 
 4.1. Install ufw:
 
-apt-get install ufw
+sudo apt install ufw
 
 4.2. Open ssh, http and https ports:
 
-ufw allow 22
-ufw allow 80
-ufw allow 443
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
 
 4.3. Run ufw:
 
-ufw enable
+sudo ufw enable
 
 4.4. Check ufw status:
 
-ufw status
+sudo ufw status
+
+5. Install docker
+
+5.1. Install docker and docker-compose:
+
+sudo api install docker docker-compose
+
+5.2. Add current user to docker group:
+
+sudo usermod -aG docker puvblik
